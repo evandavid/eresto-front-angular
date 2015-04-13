@@ -28,6 +28,8 @@ html {
   -moz-transition: width 0.3s ease-in-out;
   -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
+  -webkit-box-shadow: 2px 0 5px -2px #888;
+  box-shadow: 2px 0 5px -2px #888;
   > .sidebar-nav {
     display: table;
     padding-left: 10px;
@@ -35,7 +37,7 @@ html {
     cursor: pointer;
     padding-bottom: 5px;
     > i {
-      border: 1px solid $sidebarIconBgColor;
+      border: 2px solid $sidebarIconBgColor;
       border-radius: 18px;
       color: $sidebarIconColor;
       margin-right: 10px;
@@ -199,13 +201,14 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     > h2 {
       font-size: 1rem;
       left: 70px;
+      font-weight: 500;
       margin: 0;
       position: absolute;
       top: -13px;
     }
     > p {
       font-size: 0.9rem;
-      font-weight: 300;
+      font-weight: 400;
       left: 70px;
       position: absolute;
       top: 8px;
@@ -216,7 +219,6 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 .content-value {
   background: none repeat scroll 0 0 #fff;
   border-left: 1px solid #ccc;
-  min-height: calc(100% - 40px);
   position: absolute;
   right: 0;
   top: 50px;

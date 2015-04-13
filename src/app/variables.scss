@@ -2,9 +2,9 @@ $headerBgColor: #FFFFFF;
 $headerColor: #333;
 
 $sidebarBgColor: #2b323a;
-$sidebarIconColor: #FFFFFF;
-$sidebarIconColorActive: #2b323a;
-$sidebarIconBgColor: #FFFFFF;
+$sidebarIconColor: lighten($sidebarBgColor, 75%);
+$sidebarIconColorActive: $sidebarBgColor;
+$sidebarIconBgColor: $sidebarIconColor;
 
 $submenuBgColor: #f3f5f7;
 $submenuBorder: #c3ccd5;
