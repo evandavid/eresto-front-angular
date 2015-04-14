@@ -5,23 +5,43 @@
   <div id="sub-nav">
     Overview
     <div class="right">
-      <a class="waves-effect waves-light btn-flat grey left">Stuff</a>
-      <div class="button-group left">
-        <div>Pilihan 3</div>
-        <div>Pilihan 1</div>
-        <div>Pilihan 2</div>
-      </div>
+      <!-- <div class="button-group icon left">
+        <div ng-click="grid = false"ng-class="{active: !grid}"><i class="mdi-action-view-list"></i></div>
+        <div ng-click="grid = true" ng-class="{active: grid}"><i class="mdi-action-view-module"></i></div>
+         <div>Pilihan 2</div> 
+      </div> -->
     </div>
   </div>
 
-  <div class="content-list">
+  <div class="content-list" ng-hide="$root.grid">
     <div class="item" item-list ng-repeat="n in range(1,15)">
       <i class="mdi-social-person small"></i>
       <h2 class="header">Evan David Kristian</h2>
       <p class="description">Administrator, ev.kristian@gmail.com</p>
     </div>
+
+    <div class="content-value" ng-hide="$root.grid">
+      <p>asdad</p>
+    </div>
+
   </div>
-  <div class="content-value hidden">
-    <p>asdad</p>
+  
+
+  <div class="content-grid row" ng-show="$root.grid">
+    <div class="col s3" ng-repeat="n in range(1,15)">
+      <div class="card medium">
+        <div class="card-image card-icon waves-effect waves-block waves-light blue lighten-3">
+          <i class="mdi-social-person small"></i>
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Evan David Kristian <i class="mdi-navigation-more-vert right"></i></span>
+          <p>Administrator, ev.kristian@gmail.com</p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+      </div>
   </div>
 </div>

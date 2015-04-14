@@ -6,3 +6,10 @@ angular.module "client"
         innerHeight = $(document).innerHeight() - 110
         jQuery('.content-value').css 'width', '60%'
         jQuery('.content-value').css 'min-height', innerHeight+'px'
+  .directive 'dropdown', ->
+    restrict: 'A',
+    link: (scope, element)->
+      jQuery(element).dropdown({
+        constrainwidth: false,
+        belowOrigin: true
+      })

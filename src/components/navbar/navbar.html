@@ -1,16 +1,22 @@
 <div class="navbar-fixed">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a ng-click="$root.grid = true">View as grid</a></li>
+    <li><a ng-click="$root.grid = false">View as list</a></li>
+<!--     <li class="divider"></li>
+    <li><a href="#!">three</a></li> -->
+  </ul>
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul class="context-nav">
-        <li><i class="mdi-navigation-chevron-left button"></i></li>
+        <li class="label"><i class="mdi-navigation-chevron-left button"></i></li>
         <li class="label">Page 1</li>
-        <li><i class="mdi-navigation-chevron-right button"></i></li>
+        <li class="label"><i class="mdi-navigation-chevron-right button"></i></li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="components.html">Components</a></li>
-        <li><a href="javascript.html">JavaScript</a></li>
+        <li class="as-text">Evan David Kristian</li>
+        <li><a dropdown href="#!" data-activates="dropdown1"><i class="mdi-navigation-more-vert"></i></a></li>
+        <li><a href="sass.html"><i class="mdi-action-exit-to-app"></i></a></li>
       </ul>
     </div>
   </nav>

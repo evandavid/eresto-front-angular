@@ -9,3 +9,4 @@ angular.module "client"
         input.push i
         i += step
       input
+    $scope.grid = true

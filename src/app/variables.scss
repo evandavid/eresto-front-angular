@@ -1,13 +1,17 @@
+$baseColor: #2196f3;
+
 $headerBgColor: #FFFFFF;
 $headerColor: #333;
 
-$sidebarBgColor: #2b323a;
-$sidebarIconColor: lighten($sidebarBgColor, 75%);
+// $sidebarBgColor: #2b323a;
+$sidebarBgColor: darken($baseColor, 50%);
+$sidebarIconColor: lighten($sidebarBgColor, 85%);
 $sidebarIconColorActive: $sidebarBgColor;
 $sidebarIconBgColor: $sidebarIconColor;
 
-$submenuBgColor: #f3f5f7;
+$submenuBgColor: lighten($baseColor, 45%);
 $submenuBorder: #c3ccd5;
-$submenuColor: #8799ab;
+$submenuColor: darken($submenuBgColor, 75%);;
 
-$listBgColor: #e0e0e0;
+$listBgColor: lighten($baseColor, 43%);
+$listBgColorOdd: lighten($baseColor, 50%);

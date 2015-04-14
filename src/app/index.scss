@@ -2,7 +2,8 @@
 
 html {
   overflow: -moz-scrollbars-vertical;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: none;
 }
 
 .nav-wrapper {
@@ -13,6 +14,17 @@ html {
     font-weight: 500;
     padding-left: 20px;
     width: 180px;
+  }
+}
+
+.card-icon {
+  >i {
+    color: #e3f2fd;
+    font-size: 9rem;
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    width: 100%;
   }
 }
 
@@ -36,6 +48,7 @@ html {
     vertical-align: middle;
     cursor: pointer;
     padding-bottom: 5px;
+    width: 200px;
     > i {
       border: 2px solid $sidebarIconBgColor;
       border-radius: 18px;
@@ -48,6 +61,9 @@ html {
       vertical-align: middle;
       color: #ffffff;
       display: table-cell;
+      position: absolute;
+      left: 60px;
+      margin-top: -30px;
       opacity: 0;
       -webkit-transition: opacity 0.4s ease-in-out;
       -moz-transition: opacity 0.4s ease-in-out;
@@ -87,6 +103,12 @@ html {
 #content {
   margin-left: 60px;
   position: relative;
+  background: darken(#FFF, 5%);
+
+  > .content-grid {
+    padding: 10px;
+  box-sizing: border-box;
+  }
 }
 
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
@@ -98,10 +120,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 .context-nav {
   position: absolute;
   left: 200px;
-  color: $headerColor;
+  color: $submenuColor;
   > li {
     &.label:hover {
-      background: $headerBgColor;
+      background: none;
     }
     > i.button {
       padding: 0 15px;
@@ -137,6 +159,19 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 }
 
 .button-group {
+
+  &.icon {
+    line-height: 50px;
+    > div {
+      padding: 8px 24px;
+      > i {
+        font-size: 1.8rem;
+        margin-left: -14px;
+        margin-top: 0px;
+        position: absolute;
+      }
+    }
+  }
   > div {
     border: 1px solid #8799ab;
     cursor: pointer;
@@ -149,8 +184,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     transition: background 0.2s ease-in-out;
 
     &:hover, &.active {
-      background: $sidebarBgColor;
-      color: $sidebarIconColor;
+      background: darken($submenuBgColor, 70%);
+      color: $submenuColor;
+
+      > i {
+        color: $submenuBgColor;
+      }
     }
 
     &:first-child {
@@ -184,15 +223,18 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
       }
 
       &:nth-child(even){
-        background: darken($listBgColor, 5%);
+        background: darken($listBgColor, 1.5%);
       }
 
       &:nth-child(odd){
-        background: darken(#ffffff, 5%);
+        background: darken($listBgColorOdd, 1.5%);
       }
     }
     &:nth-child(even) {
       background: $listBgColor;
+    }
+    &:nth-child(odd) {
+      background: $listBgColorOdd;
     }
     > i {
       border-right: 1px dashed #ccc;
@@ -223,8 +265,24 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
   right: 0;
   top: 50px;
   width: 0;
-  -webkit-transition: width 0.2s ease-in-out;
-  -moz-transition: width 0.2s ease-in-out;
-  -o-transition: width 0.2s ease-in-out;
-  transition: width 0.2s ease-in-out;
+  -webkit-transition: width 0.2s ease-in;
+  -moz-transition: width 0.2s ease-in;
+  -o-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
+#nav-mobile {
+  a, li {
+    color: $submenuColor;
+  }
+  .as-text:hover {
+    background: $headerBgColor;
+  }
+}
+
+#dropdown1 {
+  width: 200px !important;
+  > li > a {
+    font-size: 1rem;
+  }
 }
