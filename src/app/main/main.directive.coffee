@@ -4,7 +4,7 @@ angular.module "client"
     link: (scope, element) ->
       element.on 'click', ->
         innerHeight = $(document).innerHeight() - 110
-        jQuery('.content-value').css 'width', '60%'
+        jQuery('.content-value').addClass 'active'
         jQuery('.content-value').css 'min-height', innerHeight+'px'
   .directive 'dropdown', ->
     restrict: 'A',

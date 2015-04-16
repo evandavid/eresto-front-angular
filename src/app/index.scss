@@ -48,7 +48,7 @@ html {
     vertical-align: middle;
     cursor: pointer;
     padding-bottom: 5px;
-    width: 200px;
+    width: 0px;
     > i {
       border: 2px solid $sidebarIconBgColor;
       border-radius: 18px;
@@ -65,6 +65,7 @@ html {
       left: 60px;
       margin-top: -30px;
       opacity: 0;
+      width: 0;
       -webkit-transition: opacity 0.4s ease-in-out;
       -moz-transition: opacity 0.4s ease-in-out;
       -o-transition: opacity 0.4s ease-in-out;
@@ -72,6 +73,7 @@ html {
     }
 
     &:hover {
+      width: 200px;
       > i {
         color: $sidebarIconColorActive;
         background: $sidebarIconBgColor;
@@ -107,7 +109,7 @@ html {
 
   > .content-grid {
     padding: 10px;
-  box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 
@@ -149,8 +151,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     margin-left: 10px;
   }
 
-  > .right > .btn, .btn-flat {
-    margin-top: 7px;
+  > .right > .btn-floating {
+    margin-top: 21px;
+    background: $submenuColor;
   }
 }
 
@@ -269,6 +272,43 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
   -moz-transition: width 0.2s ease-in;
   -o-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
+  &.active {
+    padding: 10px 20px;
+    width: 50%;
+  }
+  > .main-value {
+    > .image {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 3px;
+    }
+    > .details {
+      left: 165px;
+      position: absolute;
+      top: 10px;
+
+      > div {
+        margin-bottom: 6px;
+        margin-top: -5px;
+        > p {
+          font-size: 1.15rem;
+          line-height: 12px;
+          margin: 0px 0 1px;
+          padding-bottom: 4px;
+          display: inline-block;
+        }
+      }
+    }
+
+    > .extras {
+      margin-top: 30px;
+      > h5 {
+        border-bottom: 1px dashed #ccc;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+      }
+    }
+  }
 }
 
 #nav-mobile {
@@ -284,5 +324,28 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
   width: 200px !important;
   > li > a {
     font-size: 1rem;
+  }
+}
+
+// editable
+.editable-wrap {
+  display: block;
+  margin-top: -5px;
+
+  input {
+    font-size: 1.15rem;
+    height: 20px;
+    margin-top: -5px;
+    line-height: 12px;
+    padding: 0;
+  }
+
+  .editable-buttons {
+    position: absolute;
+    margin-top: -14px;
+
+     button {
+      padding: 0 10px;
+     }
   }
 }

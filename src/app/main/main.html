@@ -5,11 +5,7 @@
   <div id="sub-nav">
     Overview
     <div class="right">
-      <!-- <div class="button-group icon left">
-        <div ng-click="grid = false"ng-class="{active: !grid}"><i class="mdi-action-view-list"></i></div>
-        <div ng-click="grid = true" ng-class="{active: grid}"><i class="mdi-action-view-module"></i></div>
-         <div>Pilihan 2</div> 
-      </div> -->
+      <a class="btn-floating btn-large waves-effect waves-light"><i class="mdi-content-add"></i></a>
     </div>
   </div>
 
@@ -19,9 +15,55 @@
       <h2 class="header">Evan David Kristian</h2>
       <p class="description">Administrator, ev.kristian@gmail.com</p>
     </div>
-
+    <div ng-init="user = 'evandavid'; name = 'Evan David Kristian'"></div>
     <div class="content-value" ng-hide="$root.grid">
-      <p>asdad</p>
+      <div class="main-value">
+        <i class="mdi-social-person large image z-depth-1"></i>
+        <div class="details">
+          <label>Username</label>
+          <div>
+            <p editable-text="user">{{user || 'empty'}}</p>
+          </div>
+          <label>Name</label>
+          <div>
+            <p editable-text="name">{{name || 'empty'}}</p>
+          </div>
+          <label>Role</label>
+          <div>
+            <p>Administrator</p>
+          </div>
+        </div>
+        <div class="extras">
+          <h5>Sessions</h5>
+          <table class="hoverable bordered">
+            <thead>
+              <tr>
+                  <th data-field="id">Name</th>
+                  <th data-field="name">Item Name</th>
+                  <th data-field="price">Item Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
   </div>
